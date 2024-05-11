@@ -1,3 +1,4 @@
+<h2>Форма напоминания</h2>
 <form [formGroup]="reminderForm" (ngSubmit)="onSubmit()">
 
     <div class="formLine">
@@ -10,7 +11,13 @@
         <input id="completionDateTime" type="text" formControlName="completionDateTime">
       </div>
       <div>
-
+        <label for="statusId"> Статус: </label>
+        <select id="statusId" formControlName="statusId">
+          <option value="1">Новый</option>
+          <option value="2">Исполнен</option>
+          <option value="3">Запланирован</option>
+          <option value="4">Просрочен</option>
+        </select>
       </div>
    </div>
 

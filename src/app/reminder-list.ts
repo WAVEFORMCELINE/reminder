@@ -15,10 +15,10 @@ export const REMINDERS: Reminder[] = [
 ]
 
 export const STATUSES: Status[] = [
-   {id: 1, name: 'Новый'},
-   {id: 2, name: 'Исполнен'},
-   {id: 3, name: 'Запланирован'},
-   {id: 4, name: 'Просрочен'},
+   {id: 1, name: "Новый"},
+   {id: 2, name: "Исполнен"},
+   {id: 3, name: "Запланирован"},
+   {id: 4, name: "Просрочен"},
 ]
 
 // private id: number,
