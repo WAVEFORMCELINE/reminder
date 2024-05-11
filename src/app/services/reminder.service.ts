@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Reminder } from '../models/reminder.model';
+import { REMINDERS } from '../reminder-list'
 import { Status } from '../models/status.model';
 
 @Injectable({
@@ -10,20 +11,15 @@ export class ReminderService {
     // Здесь можно добавить тестовые данные
   ];
 
-  getStatuses(): Status[] {
-    return [
-      new Status('Новый'),
-      new Status('Исполнен'),
-      new Status('Запланирован'),
-      new Status('Просрочен')
-    ];
-  }
-
   getReminders(): Reminder[] {
     return this.reminders;
   }
 
-  updateReminder(updatedReminder: Reminder): void {
-    // Логика обновления напоминания
+  getReminderById(reminderId: number): Reminder | null{
+    return REMINDERS.find(reminder => reminder.id == reminderId) || null
   }
+
+  updateReminder(updatedReminder: Reminder | null): void {
+  }
+
 }

@@ -1,0 +1,34 @@
+<form [formGroup]="reminderForm" (ngSubmit)="onSubmit()">
+
+    <div class="formLine">
+      <div>
+        <label for="creationDateTime">Дата создания: </label>
+        <input id="creationDateTime" type="text" formControlName="creationDateTime">
+      </div>
+      <div>
+        <label for="completionDateTime">Дата выполнения: </label>
+        <input id="completionDateTime" type="text" formControlName="completionDateTime">
+      </div>
+      <div>
+
+      </div>
+   </div>
+
+    <label for="shortDescription">Краткое описание: </label>
+    <input id="shortDescription" type="text" formControlName="shortDescription">
+
+    <label for="fullDescription">Полное описание: </label>
+    <textarea id="fullDescription" type="text" formControlName="fullDescription"> </textarea>
+  <button type="submit">Сохранить</button>
+  <button (click)="backButton()">Назад</button>
+</form>
+
+
+
+  <!-- reminderForm = new FormGroup({
+    creationDateTime: new FormControl(''),
+    completionDateTime: new FormControl(''),
+    statusId: new FormControl(''),
+    shortDescription: new FormControl(''),
+    fullDescription: new FormControl(''),
+  }) -->

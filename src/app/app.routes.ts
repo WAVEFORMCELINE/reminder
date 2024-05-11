@@ -3,8 +3,8 @@ import { RemindersListComponent } from './components/reminders-list/reminders-li
 import { RemindersFormComponent } from './components/reminders-form/reminders-form.component';
 
 const routes: Routes = [
-  { path: '', component: RemindersListComponent },
-  { path: 'edit/:id', component: RemindersFormComponent }
+  { path: 'reminders', component: RemindersListComponent },
+  { path: 'reminders/:id', component: RemindersFormComponent }
 ];
 
 export default routes;
